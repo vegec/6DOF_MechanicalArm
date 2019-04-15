@@ -120,7 +120,7 @@ u32 oled_pow(u8 m,u8 n)
 //显示2个数字
 //x,y :起点坐标	 
 //len :数字的位数
-//size:字体大小
+//size:字体大小12/16
 //mode:模式	0,填充模式;1,叠加模式
 //num:数值(0~4294967295);	 		  
 void OLED_ShowNumber(u8 x,u8 y,u32 num,u8 len,u8 size)

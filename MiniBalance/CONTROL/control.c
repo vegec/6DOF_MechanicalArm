@@ -1,4 +1,5 @@
 #include "control.h"	
+#include "usart.h"	
   /**************************************************************************
 作者：平衡小车之家
 我的淘宝小店：http://shop114407458.taobao.com/
@@ -88,19 +89,9 @@ int TIM2_IRQHandler(void)
 			 {
 				 if(++delay_50==5)	 delay_50=0,delay_flag=0;  //给主函数提供50ms的精准延时
 			 }
-			Key();//扫描按键变化	
-		if(Turn_Off(Voltage)==0)               //===如果电池电压不存在异常
-		{
-			if(Flag_Way==1)     //进行运动学分析之后的控制
-			{
-			 Control(Speed/10000);	  //PS2遥控坐标
-			 temp=Kinematic_Analysis(TargetX,TargetY,Target_Beta,Target_Alpha,Target_Gamma);  //运动学分析
-			}
-			else	
-			{
-				 Control(Speed/3);	   //PS2控制单个舵机
-			}
-				 Xianfu_Pwm();   //
+	//		Control(Speed/3);	   //PS2控制单个舵机
+			Get_Target();
+			Xianfu_Pwm();   //
 			Velocity1=Position_PID1(Position1,Target1);//舵机PID控制
 			Velocity2=Position_PID2(Position2,Target2);//舵机PID控制
 			Velocity3=Position_PID3(Position3,Target3);//舵机PID控制
@@ -109,10 +100,7 @@ int TIM2_IRQHandler(void)
 			Velocity6=Position_PID6(Position6,Target6);//舵机PID控制
 			Xianfu_Pwm2();
 			Set_Pwm(Velocity1,Velocity2,Velocity3,Velocity4,Velocity5,Velocity6);    //赋值给PWM寄存器
-  	 }
-		  Led_Flash(100);                     //===LED闪烁;常规模式 1s改变一次指示灯的状态	
-			Voltage_All+=Get_battery_volt();     //多次采样累积
-			if(++Voltage_Count==100) Voltage=Voltage_All/100,Voltage_All=0,Voltage_Count=0;//求平均值 获取电池电压	       
+		  Led_Flash(100);                     //===LED闪烁;常规模式 1s改变一次指示灯的状态	 
    	}       	
 	 return 0;	  
 } 
@@ -194,71 +182,116 @@ void Xianfu_Pwm2(void)
 		if(Velocity6<Amplitude_L)  Velocity6=Amplitude_L;	
 		if(Velocity6>Amplitude_H)  Velocity6=Amplitude_H;	
 }
-/**************************************************************************
-函数功能：按键修改小车运行状态 
-入口参数：无
-返回  值：无
-**************************************************************************/
-void Key(void)
-{	
-	u8 temp;
-	temp=click_N_Double(50);         //双击检测
-  if(temp==1)	Flag_Way=!Flag_Way;//单击控制机械臂的状态
- // if(temp==2)	Flag_Show=!Flag_Show;//控制显示状态
-}
 
 /**************************************************************************
 函数功能：控制机械臂
 入口参数：控制目标
 返回  值：无
 **************************************************************************/
-void Control(float Step)
-{ 	
-			if(Flag_Way==1)    //坐标控制
-		{	
-			 if(PS2_KEY==5)    TargetX+=Step;   //X轴
-	 else if(PS2_KEY==7)		TargetX-=Step;
-	
-	 else if(PS2_KEY==12)		TargetY+=Step;   //Y轴
-	 else if(PS2_KEY==10)		TargetY-=Step;
-	
-	 else if(PS2_KEY==8)		Target_Beta-=Step*1000;    //云台
-	 else if(PS2_KEY==6)		Target_Beta+=Step*1000;
-	
-	 else if(PS2_KEY==13)		Target_Alpha-=Step;     //机械手的朝向
-	 else if(PS2_KEY==15)		Target_Alpha+=Step;
-	
-	 else if(PS2_KEY==14)		Target5+=Step*3000;     //机械手的张合
-	 else if(PS2_KEY==16)		Target5-=Step*3000;
-	
-	 else if(PS2_KEY==4)		Target_Gamma+=Step*1000;     //6自由度额外增加的舵机
-	 else if(PS2_KEY==1)		Target_Gamma-=Step*1000;
+//void Control(float Step)
+//{ 	
+//			if(Flag_Way==1)    //坐标控制
+//		{	
+//			 if(PS2_KEY==5)    TargetX+=Step;   //X轴
+//	 else if(PS2_KEY==7)		TargetX-=Step;
+//	
+//	 else if(PS2_KEY==12)		TargetY+=Step;   //Y轴
+//	 else if(PS2_KEY==10)		TargetY-=Step;
+//	
+//	 else if(PS2_KEY==8)		Target_Beta-=Step*1000;    //云台
+//	 else if(PS2_KEY==6)		Target_Beta+=Step*1000;
+//	
+//	 else if(PS2_KEY==13)		Target_Alpha-=Step;     //机械手的朝向
+//	 else if(PS2_KEY==15)		Target_Alpha+=Step;
+//	
+//	 else if(PS2_KEY==14)		Target5+=Step*3000;     //机械手的张合
+//	 else if(PS2_KEY==16)		Target5-=Step*3000;
+//	
+//	 else if(PS2_KEY==4)		Target_Gamma+=Step*1000;     //6自由度额外增加的舵机
+//	 else if(PS2_KEY==1)		Target_Gamma-=Step*1000;
+//			
+//		}
+//	  else	//单独控制
+//		{ 
+//				if(PS2_KEY==8)     Target1+=Step;     //云台
+//	 else if(PS2_KEY==6)		 Target1-=Step;
+//	
+//	 else if(PS2_KEY==12)			Target2-=Step;    //大臂
+//	 else if(PS2_KEY==10)			Target2+=Step;
+//	
+//	 else if(PS2_KEY==5)		Target3-=Step;   //中间的舵机
+//	 else if(PS2_KEY==7)		Target3+=Step;   
+//	
+//	 else if(PS2_KEY==13)		Target4-=Step;  //小臂
+//	 else if(PS2_KEY==15)		Target4+=Step;
+//	
+//	 else if(PS2_KEY==14)		Target5+=Step;   //机械手的张合
+//	 else if(PS2_KEY==16)		Target5-=Step;
+//	
+//	 else if(PS2_KEY==4)		Target6-=Step;  //6自由度额外增加的舵机
+//	 else if(PS2_KEY==1)		Target6+=Step;
+//		}
+//		if(PS2_KEY==11)		Speed+=0.05;  //速度控制
+//	  else if(PS2_KEY==9)		Speed-=0.05;
+//		if(Speed<=3)Speed=3;
+//		if(Speed>=30)Speed=30;
+//}
+void Get_Target(void)
+{
+	int len=0,t=0,temp=0,TempTarget=0;
+	int Amplitude_H=1200, Amplitude_L=300; 
+  len=USART_RX_STA&0x3fff;	
+	for(t=0;t<len;t++)
+{
+  if(USART_RX_BUF[t]=='T')
+	{
+		t++;
+		temp=USART_RX_BUF[t]-'0';
+		switch(temp)
+		{
+			case 1:
+			t=t+2;
+			TempTarget=(USART_RX_BUF[t]-'0')*100+(USART_RX_BUF[t+1]-'0')*10+(USART_RX_BUF[t+2]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+		    	Target1=TempTarget;
+			break;
+			case 2:
+			t=t+2;
+			TempTarget=(USART_RX_BUF[t]-'0')*100+(USART_RX_BUF[t+1]-'0')*10+(USART_RX_BUF[t+2]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+			   Target2=TempTarget;
+			break;
+			case 3:
+			t=t+2;
+			TempTarget=(USART_RX_BUF[t]-'0')*100+(USART_RX_BUF[t+1]-'0')*10+(USART_RX_BUF[t+2]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+			   Target3=TempTarget;
+			break;
+			case 4:
+			t=t+2;
+			TempTarget=(USART_RX_BUF[t]-'0')*100+(USART_RX_BUF[t+1]-'0')*10+(USART_RX_BUF[t+2]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+		   	Target4=TempTarget;
+			break;
+			case 5:
+			t=t+2;
+			TempTarget=(USART_RX_BUF[t]-'0')*100+(USART_RX_BUF[t+1]-'0')*10+(USART_RX_BUF[t+2]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+			   Target5=TempTarget;
+			break;
+			case 6:
+			t=t+2;
+			TempTarget=(USART_RX_BUF[t]-'0')*100+(USART_RX_BUF[t+1]-'0')*10+(USART_RX_BUF[t+2]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+			   Target6=TempTarget;
+			break;
 			
 		}
-	  else	//单独控制
-		{ 
-				if(PS2_KEY==8)     Target1+=Step;     //云台
-	 else if(PS2_KEY==6)		 Target1-=Step;
-	
-	 else if(PS2_KEY==12)			Target2-=Step;    //大臂
-	 else if(PS2_KEY==10)			Target2+=Step;
-	
-	 else if(PS2_KEY==5)		Target3-=Step;   //中间的舵机
-	 else if(PS2_KEY==7)		Target3+=Step;   
-	
-	 else if(PS2_KEY==13)		Target4-=Step;  //小臂
-	 else if(PS2_KEY==15)		Target4+=Step;
-	
-	 else if(PS2_KEY==14)		Target5+=Step;   //机械手的张合
-	 else if(PS2_KEY==16)		Target5-=Step;
-	
-	 else if(PS2_KEY==4)		Target6-=Step;  //6自由度额外增加的舵机
-	 else if(PS2_KEY==1)		Target6+=Step;
-		}
-		if(PS2_KEY==11)		Speed+=0.05;  //速度控制
-	  else if(PS2_KEY==9)		Speed-=0.05;
-		if(Speed<=3)Speed=3;
-		if(Speed>=30)Speed=30;
+
+	}
+
+}
+	USART_RX_STA=0;
 }
 /**************************************************************************
 函数功能：位置式PID控制器

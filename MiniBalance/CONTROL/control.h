@@ -18,6 +18,7 @@ u8 Turn_Off( int voltage);
 void Get_Angle(u8 way);
 int myabs(int a);
 void Control(float Step);
+void Get_Target(void);
 float Position_PID1 (float Encoder,float Target);
 float Position_PID2 (float Encoder,float Target);
 float Position_PID3 (float Encoder,float Target);
