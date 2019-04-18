@@ -45,6 +45,10 @@
 ..\obj\motor.o: ..\MiniBalance_HARDWARE\DataScope_DP\DataScope_DP.h
 ..\obj\motor.o: ..\MiniBalance_HARDWARE\STMFLASH\stmflash.h
 ..\obj\motor.o: ..\MiniBalance_HARDWARE\PS2\pstwo.h
+..\obj\motor.o: ..\MiniBalance_HARDWARE\MPU6050\mpu6050.h
+..\obj\motor.o: ..\MiniBalance_HARDWARE\MPU6050\mpuiic.h
+..\obj\motor.o: ..\MiniBalance_HARDWARE\MPU6050\eMPL\inv_mpu.h
+..\obj\motor.o: ..\MiniBalance_HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 ..\obj\motor.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\motor.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\motor.o: D:\MDK5\ARM\ARMCC\Bin\..\include\math.h

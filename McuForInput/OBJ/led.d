@@ -38,13 +38,11 @@
 ..\obj\led.o: ..\SYSTEM\usart\usart.h
 ..\obj\led.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\led.o: ..\MiniBalance_HARDWARE\USART3\usart3.h
-..\obj\led.o: ..\MiniBalance_HARDWARE\ADC\adc.h
 ..\obj\led.o: ..\MiniBalance_HARDWARE\TIMER\timer.h
-..\obj\led.o: ..\MiniBalance_HARDWARE\MOTOR\motor.h
-..\obj\led.o: ..\MiniBalance\show\show.h
-..\obj\led.o: ..\MiniBalance_HARDWARE\DataScope_DP\DataScope_DP.h
-..\obj\led.o: ..\MiniBalance_HARDWARE\STMFLASH\stmflash.h
-..\obj\led.o: ..\MiniBalance_HARDWARE\PS2\pstwo.h
+..\obj\led.o: ..\MiniBalance_HARDWARE\MPU6050\mpu6050.h
+..\obj\led.o: ..\MiniBalance_HARDWARE\MPU6050\mpuiic.h
+..\obj\led.o: ..\MiniBalance_HARDWARE\MPU6050\eMPL\inv_mpu.h
+..\obj\led.o: ..\MiniBalance_HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 ..\obj\led.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\led.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\led.o: D:\MDK5\ARM\ARMCC\Bin\..\include\math.h

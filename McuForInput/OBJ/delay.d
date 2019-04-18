@@ -38,13 +38,11 @@
 ..\obj\delay.o: ..\SYSTEM\usart\usart.h
 ..\obj\delay.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\delay.o: ..\MiniBalance_HARDWARE\USART3\usart3.h
-..\obj\delay.o: ..\MiniBalance_HARDWARE\ADC\adc.h
 ..\obj\delay.o: ..\MiniBalance_HARDWARE\TIMER\timer.h
-..\obj\delay.o: ..\MiniBalance_HARDWARE\MOTOR\motor.h
-..\obj\delay.o: ..\MiniBalance\show\show.h
-..\obj\delay.o: ..\MiniBalance_HARDWARE\DataScope_DP\DataScope_DP.h
-..\obj\delay.o: ..\MiniBalance_HARDWARE\STMFLASH\stmflash.h
-..\obj\delay.o: ..\MiniBalance_HARDWARE\PS2\pstwo.h
+..\obj\delay.o: ..\MiniBalance_HARDWARE\MPU6050\mpu6050.h
+..\obj\delay.o: ..\MiniBalance_HARDWARE\MPU6050\mpuiic.h
+..\obj\delay.o: ..\MiniBalance_HARDWARE\MPU6050\eMPL\inv_mpu.h
+..\obj\delay.o: ..\MiniBalance_HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 ..\obj\delay.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\delay.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\delay.o: D:\MDK5\ARM\ARMCC\Bin\..\include\math.h

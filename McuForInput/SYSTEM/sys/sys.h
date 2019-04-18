@@ -73,13 +73,11 @@
 #include "oled.h"
 #include "usart.h"
 #include "usart3.h"
-#include "adc.h"
 #include "timer.h"
-#include "motor.h"
-#include "show.h"					
-#include "DataScope_DP.h"
-#include "stmflash.h" 
-#include "pstwo.h"
+#include "mpu6050.h"
+#include "inv_mpu.h"
+#include "inv_mpu_dmp_motion_driver.h" 
+
 //JTAG模式设置定义
 #define JTAG_SWD_DISABLE   0X02
 #define SWD_ENABLE         0X01
