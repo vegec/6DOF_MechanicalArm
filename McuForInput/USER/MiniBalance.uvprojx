@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_ HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\MiniBalance_COER;..\STM32F10x_FWLib\inc;..\MiniBalance_HARDWARE;..\SYSTEM;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\MiniBalance_HARDWARE\OLED;..\MiniBalance\show;..\MiniBalance_HARDWARE\LED;..\MiniBalance_HARDWARE\KEY;..\MiniBalance_HARDWARE\ADC;..\MiniBalance_HARDWARE\MOTOR;..\MiniBalance_HARDWARE\TIMER;..\MiniBalance_HARDWARE\USART3;..\MiniBalance_HARDWARE\DataScope_DP;..\MiniBalance\filter;..\MiniBalance_HARDWARE;..\MiniBalance_HARDWARE\STMFLASH;..\MiniBalance_HARDWARE\PS2</IncludePath>
+              <IncludePath>..\USER;..\MiniBalance_COER;..\STM32F10x_FWLib\inc;..\MiniBalance_HARDWARE;..\SYSTEM;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\MiniBalance_HARDWARE\OLED;..\MiniBalance\show;..\MiniBalance_HARDWARE\LED;..\MiniBalance_HARDWARE\KEY;..\MiniBalance_HARDWARE\ADC;..\MiniBalance_HARDWARE\MOTOR;..\MiniBalance_HARDWARE\TIMER;..\MiniBalance_HARDWARE\USART3;..\MiniBalance_HARDWARE\DataScope_DP;..\MiniBalance\filter;..\MiniBalance_HARDWARE;..\MiniBalance_HARDWARE\STMFLASH;..\MiniBalance_HARDWARE\PS2;..\MiniBalance_HARDWARE\MPU6050;..\MiniBalance_HARDWARE\MPU6050\eMPL</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -599,19 +599,9 @@
               <FilePath>..\MiniBalance_HARDWARE\OLED\oled.c</FilePath>
             </File>
             <File>
-              <FileName>adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MiniBalance_HARDWARE\ADC\adc.c</FilePath>
-            </File>
-            <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MiniBalance_HARDWARE\TIMER\timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MiniBalance_HARDWARE\MOTOR\motor.c</FilePath>
             </File>
             <File>
               <FileName>usart3.c</FileName>
@@ -619,34 +609,24 @@
               <FilePath>..\MiniBalance_HARDWARE\USART3\usart3.c</FilePath>
             </File>
             <File>
-              <FileName>stmflash.c</FileName>
+              <FileName>mpu6050.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MiniBalance_HARDWARE\STMFLASH\stmflash.c</FilePath>
+              <FilePath>..\MiniBalance_HARDWARE\MPU6050\mpu6050.c</FilePath>
             </File>
             <File>
-              <FileName>pstwo.c</FileName>
+              <FileName>mpuiic.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MiniBalance_HARDWARE\PS2\pstwo.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>MiniBalance</GroupName>
-          <Files>
-            <File>
-              <FileName>control.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MiniBalance\CONTROL\control.c</FilePath>
+              <FilePath>..\MiniBalance_HARDWARE\MPU6050\mpuiic.c</FilePath>
             </File>
             <File>
-              <FileName>show.c</FileName>
+              <FileName>inv_mpu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MiniBalance\show\show.c</FilePath>
+              <FilePath>..\MiniBalance_HARDWARE\MPU6050\eMPL\inv_mpu.c</FilePath>
             </File>
             <File>
-              <FileName>DataScope_DP.C</FileName>
+              <FileName>inv_mpu_dmp_motion_driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MiniBalance_HARDWARE\DataScope_DP\DataScope_DP.C</FilePath>
+              <FilePath>..\MiniBalance_HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.c</FilePath>
             </File>
           </Files>
         </Group>

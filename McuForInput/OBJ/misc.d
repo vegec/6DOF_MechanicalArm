@@ -1,7 +1,7 @@
 ..\obj\misc.o: ..\STM32F10x_FWLib\src\misc.c
 ..\obj\misc.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\misc.o: ..\USER\stm32f10x.h
-..\obj\misc.o: ..\MiniBalance_COER\core_cm3.h
+..\obj\misc.o: ..\COER\core_cm3.h
 ..\obj\misc.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\misc.o: ..\USER\system_stm32f10x.h
 ..\obj\misc.o: ..\USER\stm32f10x_conf.h
