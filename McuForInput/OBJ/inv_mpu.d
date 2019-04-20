@@ -46,3 +46,5 @@
 ..\obj\inv_mpu.o: ..\HARDWARE\USART3\usart3.h
 ..\obj\inv_mpu.o: ..\HARDWARE\TIMER\timer.h
 ..\obj\inv_mpu.o: ..\HARDWARE\MPU6050\mpu6050.h
+..\obj\inv_mpu.o: ..\HARDWARE\SPI\spi.h
+..\obj\inv_mpu.o: ..\HARDWARE\NRF24L01\24l01.h

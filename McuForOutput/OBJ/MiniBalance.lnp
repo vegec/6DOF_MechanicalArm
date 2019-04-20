@@ -39,6 +39,8 @@
 "..\obj\usart3.o"
 "..\obj\stmflash.o"
 "..\obj\pstwo.o"
+"..\obj\spi.o"
+"..\obj\24l01.o"
 "..\obj\control.o"
 "..\obj\show.o"
 "..\obj\datascope_dp.o"

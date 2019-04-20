@@ -46,6 +46,8 @@
 ..\obj\pstwo.o: ..\MiniBalance_HARDWARE\DataScope_DP\DataScope_DP.h
 ..\obj\pstwo.o: ..\MiniBalance_HARDWARE\STMFLASH\stmflash.h
 ..\obj\pstwo.o: ..\MiniBalance_HARDWARE\PS2\pstwo.h
+..\obj\pstwo.o: ..\MiniBalance_HARDWARE\SPI\spi.h
+..\obj\pstwo.o: ..\MiniBalance_HARDWARE\NRF24L01\24l01.h
 ..\obj\pstwo.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\pstwo.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\pstwo.o: D:\MDK5\ARM\ARMCC\Bin\..\include\math.h

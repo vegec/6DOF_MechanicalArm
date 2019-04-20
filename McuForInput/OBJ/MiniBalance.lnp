@@ -38,6 +38,8 @@
 "..\obj\inv_mpu_dmp_motion_driver.o"
 "..\obj\oled.o"
 "..\obj\timer.o"
+"..\obj\24l01.o"
+"..\obj\spi.o"
 --strict --scatter "..\OBJ\MiniBalance.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

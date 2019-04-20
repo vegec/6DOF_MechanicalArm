@@ -42,6 +42,8 @@
 ..\obj\minibalance.o: ..\HARDWARE\MPU6050\mpuiic.h
 ..\obj\minibalance.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
 ..\obj\minibalance.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+..\obj\minibalance.o: ..\HARDWARE\SPI\spi.h
+..\obj\minibalance.o: ..\HARDWARE\NRF24L01\24l01.h
 ..\obj\minibalance.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\minibalance.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\minibalance.o: D:\MDK5\ARM\ARMCC\Bin\..\include\math.h

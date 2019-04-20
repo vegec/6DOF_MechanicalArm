@@ -48,3 +48,5 @@
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\TIMER\timer.h
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\MPU6050\mpu6050.h
 ..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\MPU6050\mpuiic.h
+..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\SPI\spi.h
+..\obj\inv_mpu_dmp_motion_driver.o: ..\HARDWARE\NRF24L01\24l01.h

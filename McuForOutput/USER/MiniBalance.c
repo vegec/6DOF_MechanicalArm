@@ -15,9 +15,13 @@ float Target1=750,Target2=735,Target3=717,Target4=750,Target5=750,Target6=800;  
 float TargetX=0.2,TargetY=0,Target_Beta=-45,Target_Alpha=0,Target_Gamma=0;     					//电机目标值
 float	Position_KP=6,Position_KI=0,Position_KD=3;                        //位置控制PID参数
 int PS2_LX,PS2_LY,PS2_RX,PS2_RY,PS2_KEY;
+
+u8 NRF_buf[33];	
+
 int main(void)
   { 
 		int temp=0;
+			
 		uart_init(115200);
 		delay_init();
 		JTAG_Set(SWD_ENABLE);//jtag,swd模式全使能
@@ -29,30 +33,31 @@ int main(void)
 		TIM2_Int_Init(99,7199);         //=====定时器10ms中断
 		TIM1_PWM_Init(9999,143);        //=====PWM初始化(144分频，T=1/(72000000/144)=2us,10000*2us=20ms)
 		TIM4_PWM_Init(9999,143);        //=====PWM初始化		
-		
+		NRF24L01_Init();
+			while(NRF24L01_Check())//检测不到24L01
+		{
+						
+			OLED_ShowString(1,36,"24L01 Check Failed!");
+		  OLED_Refresh_Gram();	
+			delay_ms(200);						
+		}
+		  OLED_ShowString(1,36,"24L01 Ready!");
+			NRF24L01_RX_Mode();	
 		while(1)
 		{
 			temp=KEY_Scan();
 			if(temp==1)
 			{
-        Target3=Target3+10;
-				Target4=Target4+10;
-				USART_RX_STA=0;
-			}	
-			OLED_ShowString(1,0,"Targe1:");
-			OLED_ShowNumber(40,0,Target1,4,12);
-			OLED_ShowString(1,12,"Targe2:");
-			OLED_ShowNumber(40,12,Target2,4,12);	
-			OLED_ShowString(1,24,"Targe3:");
-			OLED_ShowNumber(40,24,Target3,4,12);	
-			OLED_ShowString(1,36,"Targe4:");
-			OLED_ShowNumber(40,36,Target4,4,12);	
-			OLED_ShowString(1,48,"Targe5:");
-			OLED_ShowNumber(40,48,Target5,4,12);	
-			OLED_ShowString(80,0,"Targe6:");
-			OLED_ShowNumber(80,12,Target6,4,12);	
-		 OLED_Refresh_Gram();	
-//			oled_show();
+        Target1=Target1+10;
+			//	Target4=Target4+10;
+				//USART_RX_STA=0;
+			}		   		    		    				 
+			if(NRF24L01_RxPacket(NRF_buf)==0)//一旦接收到信息,则显示出来.
+			{
+				NRF_buf[32]=0;//加入字符串结束符
+				OLED_ShowString(1,48,"24L01 DATA RECV");    
+			}  			    
+			oled_show();
 		}
 
   }

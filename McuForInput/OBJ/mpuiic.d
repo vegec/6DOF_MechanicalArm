@@ -43,6 +43,8 @@
 ..\obj\mpuiic.o: ..\HARDWARE\MPU6050\mpuiic.h
 ..\obj\mpuiic.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
 ..\obj\mpuiic.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+..\obj\mpuiic.o: ..\HARDWARE\SPI\spi.h
+..\obj\mpuiic.o: ..\HARDWARE\NRF24L01\24l01.h
 ..\obj\mpuiic.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\mpuiic.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\mpuiic.o: D:\MDK5\ARM\ARMCC\Bin\..\include\math.h

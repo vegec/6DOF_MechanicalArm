@@ -45,6 +45,8 @@
 ..\obj\oled.o: ..\MiniBalance_HARDWARE\DataScope_DP\DataScope_DP.h
 ..\obj\oled.o: ..\MiniBalance_HARDWARE\STMFLASH\stmflash.h
 ..\obj\oled.o: ..\MiniBalance_HARDWARE\PS2\pstwo.h
+..\obj\oled.o: ..\MiniBalance_HARDWARE\SPI\spi.h
+..\obj\oled.o: ..\MiniBalance_HARDWARE\NRF24L01\24l01.h
 ..\obj\oled.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\oled.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\oled.o: D:\MDK5\ARM\ARMCC\Bin\..\include\math.h
