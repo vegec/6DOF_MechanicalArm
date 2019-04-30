@@ -13,72 +13,20 @@ float Vol;
 **************************************************************************/
 void oled_show(void)
 {                         
-                          OLED_ShowString(0,0,"K");
-	                        OLED_ShowNumber(5,0,PS2_KEY,2,12);
-	
-	                        OLED_ShowString(20,0,"S");
-	                        OLED_ShowNumber(27,0,Speed,2,12);
-	
-		                      OLED_ShowString(53,0,".");
-		                      OLED_ShowString(75,0,"V");
-		                      OLED_ShowNumber(40,0,Voltage/100,2,12);
-		                      OLED_ShowNumber(63,0,Voltage%100,2,12);
-		 if(Voltage%100<10) 	OLED_ShowNumber(57,0,0,2,12);
-		      if(Flag_Way==1) OLED_ShowString(90,0,"XYZ");  //坐标控制
-		else if(Flag_Way==0)	OLED_ShowString(90,0,"ABC");   //单独控制
-	//=============显示电机A的状态=======================//	
-	  if( Target1<0)		    OLED_ShowString(00,10,"-"),
-		                      OLED_ShowNumber(15,10,-Target1,6,12);
-		else                 	OLED_ShowString(0,10,"+"),
-		                      OLED_ShowNumber(15,10, Target1,6,12); 
-		
-		if( Position1<0)		  OLED_ShowString(60,10,"-"),
-		                      OLED_ShowNumber(75,10,-Position1,6,12);
-		else                 	OLED_ShowString(60,10,"+"),
-		                      OLED_ShowNumber(75,10, Position1,6,12);
-		//=============显示电机B的状态=======================//	
-		  if( Target2<0)		  OLED_ShowString(00,20,"-"),
-		                      OLED_ShowNumber(15,20,-Target2,6,12);
-		else                 	OLED_ShowString(0,20,"+"),
-		                      OLED_ShowNumber(15,20, Target2,6,12); 
-		  
-		if( Position2<0)		  OLED_ShowString(60,20,"-"),
-		                      OLED_ShowNumber(75,20,-Position2,6,12);
-		else                 	OLED_ShowString(60,20,"+"),
-		                      OLED_ShowNumber(75,20, Position2,6,12);
- 		//=============显示电机C的状态=======================//	
-		  if( Target3<0)		  OLED_ShowString(00,30,"-"),
-		                      OLED_ShowNumber(15,30,-Target3,6,12);
-		else                 	OLED_ShowString(0,30,"+"),
-		                      OLED_ShowNumber(15,30, Target3,6,12); 
-		  
-		if( Position3<0)		  OLED_ShowString(60,30,"-"),
-		                      OLED_ShowNumber(75,30,-Position3,6,12);
-		else                 	OLED_ShowString(60,30,"+"),
-		                      OLED_ShowNumber(75,30, Position3,6,12);	
-		//=============显示电机D的状态=======================//	
-		  if( Target4<0)	  	OLED_ShowString(00,40,"-"),
-		                      OLED_ShowNumber(15,40,-Target4,6,12);
-		else                 	OLED_ShowString(0,40,"+"),
-		                      OLED_ShowNumber(15,40, Target4,6,12); 
-		
-		if( Position4<0)		  OLED_ShowString(60,40,"-"),
-		                      OLED_ShowNumber(75,40,-Position4,6,12);
-		else                 	OLED_ShowString(60,40,"+"),
-		                      OLED_ShowNumber(75,40, Position4,6,12);
-			//=============显示电机D的状态=======================//	
-    if( Target5<0)	    	OLED_ShowString(00,50,"-"),
-		                      OLED_ShowNumber(15,50,-Target5,6,12);
-		else                 	OLED_ShowString(0,50,"+"),
-		                      OLED_ShowNumber(15,50, Target5,6,12); 
-		
-		if( Position5<0)		  OLED_ShowString(60,50,"-"),
-		                      OLED_ShowNumber(75,50,-Position5,6,12);
-		else                 	OLED_ShowString(60,50,"+"),
-		                      OLED_ShowNumber(75,50, Position5,6,12);
 
-		//=============刷新=======================//
-		OLED_Refresh_Gram();	
+			OLED_ShowString(1,0,"T1:");
+			OLED_ShowNumber(20,0,Target1,4,12);
+			OLED_ShowString(60,0,"T2:");
+			OLED_ShowNumber(80,0,Target2,4,12);	
+			OLED_ShowString(1,12,"T3:");
+			OLED_ShowNumber(20,12,Target3,4,12);	
+			OLED_ShowString(60,12,"T4:");
+			OLED_ShowNumber(80,12,Target4,4,12);	
+			OLED_ShowString(1,24,"T5:");
+			OLED_ShowNumber(20,24,Target5,4,12);	
+			OLED_ShowString(60,24,"T6:");
+			OLED_ShowNumber(80,24,Target6,4,12);	
+		 OLED_Refresh_Gram();	
 	}
 /**************************************************************************
 函数功能：向APP发送数据

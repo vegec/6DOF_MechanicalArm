@@ -80,6 +80,8 @@
 #include "DataScope_DP.h"
 #include "stmflash.h" 
 #include "pstwo.h"
+#include "spi.h"
+#include "24l01.h"
 //JTAG模式设置定义
 #define JTAG_SWD_DISABLE   0X02
 #define SWD_ENABLE         0X01
@@ -100,7 +102,7 @@ extern float	Position_KP,Position_KI,Position_KD;  //位置控制PID参数
 extern float TargetX,TargetY,Target_Beta,Target_Alpha,Target_Gamma;     //电机目标值
 extern int Servo1,Servo2,Servo3,Servo4,Servo5;     
 extern int PS2_LX,PS2_LY,PS2_RX,PS2_RY,PS2_KEY;
-
+extern u8 NRF_buf[33];
 /////////////////////////////////////////////////////////////////  
 void Stm32_Clock_Init(u8 PLL);  //时钟初始化  
 void Sys_Soft_Reset(void);      //系统软复位

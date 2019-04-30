@@ -76,8 +76,8 @@
 #include "timer.h"
 #include "mpu6050.h"
 #include "inv_mpu.h"
-#include "inv_mpu_dmp_motion_driver.h" 
-
+#include "spi.h"
+#include "24l01.h"
 //JTAG模式设置定义
 #define JTAG_SWD_DISABLE   0X02
 #define SWD_ENABLE         0X01

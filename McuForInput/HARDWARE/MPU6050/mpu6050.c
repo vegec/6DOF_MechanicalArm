@@ -24,18 +24,21 @@ u8 MPU_Init(void)
   GPIO_InitTypeDef  GPIO_InitStructure;
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);//使能AFIO时钟 
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA,ENABLE);//先使能外设IO PORTA时钟 
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);//先使能外设IO PORTA时钟 
 	
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15;	 // 端口配置
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1;	 // 端口配置
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 		 //推挽输出
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;		 //IO口速度为50MHz
-  GPIO_Init(GPIOA, &GPIO_InitStructure);					 //根据设定参数初始化GPIOA
+  GPIO_Init(GPIOB, &GPIO_InitStructure);					 //根据设定参数初始化GPIOB
 
 	GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);//禁止JTAG,从而PA15可以做普通IO使用,否则PA15不能做普通IO!!!
 	
-	//MPU_AD0_CTRL=0;			//控制MPU6050的AD0脚为低电平,从机地址为:0X68
-	
 	MPU_IIC_Init();//初始化IIC总线
+	
+	MPU_AD0_CTRL=1;			//控制MPU6050的AD0脚为低电平,从机地址为:0X68
+	MPU2_AD0_CTRL=0;	
+	
+
 	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X80);	//复位MPU6050
   delay_ms(100);
 	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X00);	//唤醒MPU6050 
@@ -53,6 +56,32 @@ u8 MPU_Init(void)
 		MPU_Write_Byte(MPU_PWR_MGMT2_REG,0X00);	//加速度与陀螺仪都工作
 		MPU_Set_Rate(50);						//设置采样率为50Hz
  	}else return 1;
+	
+	
+	
+	
+	MPU_AD0_CTRL=0;			//控制MPU6050的AD0脚为低电平,从机地址为:0X68
+	MPU2_AD0_CTRL=1;	
+	
+	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X80);	//复位MPU6050
+  delay_ms(100);
+	MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X00);	//唤醒MPU6050 
+	MPU_Set_Gyro_Fsr(3);					//陀螺仪传感器,±2000dps
+	MPU_Set_Accel_Fsr(0);					//加速度传感器,±2g
+	MPU_Set_Rate(50);						//设置采样率50Hz
+	MPU_Write_Byte(MPU_INT_EN_REG,0X00);	//关闭所有中断
+	MPU_Write_Byte(MPU_USER_CTRL_REG,0X00);	//I2C主模式关闭
+	MPU_Write_Byte(MPU_FIFO_EN_REG,0X00);	//关闭FIFO
+	MPU_Write_Byte(MPU_INTBP_CFG_REG,0X80);	//INT引脚低电平有效
+	res=MPU_Read_Byte(MPU_DEVICE_ID_REG);
+	if(res==MPU_ADDR)//器件ID正确
+	{
+		MPU_Write_Byte(MPU_PWR_MGMT1_REG,0X01);	//设置CLKSEL,PLL X轴为参考
+		MPU_Write_Byte(MPU_PWR_MGMT2_REG,0X00);	//加速度与陀螺仪都工作
+		MPU_Set_Rate(50);						//设置采样率为50Hz
+ 	}else return 1;
+	
+
 	return 0;
 }
 //设置MPU6050陀螺仪传感器满量程范围

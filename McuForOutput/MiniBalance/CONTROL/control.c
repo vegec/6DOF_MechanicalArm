@@ -90,7 +90,7 @@ int TIM2_IRQHandler(void)
 				 if(++delay_50==5)	 delay_50=0,delay_flag=0;  //给主函数提供50ms的精准延时
 			 }
 	//		Control(Speed/3);	   //PS2控制单个舵机
-			Get_Target();
+			Get_Target_NRF();
 			Xianfu_Pwm();   //
 			Velocity1=Position_PID1(Position1,Target1);//舵机PID控制
 			Velocity2=Position_PID2(Position2,Target2);//舵机PID控制
@@ -282,6 +282,64 @@ void Get_Target(void)
 			case 6:
 			t=t+2;
 			TempTarget=(USART_RX_BUF[t]-'0')*100+(USART_RX_BUF[t+1]-'0')*10+(USART_RX_BUF[t+2]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+			   Target6=TempTarget;
+			break;
+			
+		}
+
+	}
+
+}
+	USART_RX_STA=0;
+}
+void Get_Target_NRF(void)
+{
+	int len=0,t=0,temp=0,TempTarget=0;
+	int Amplitude_H=1200, Amplitude_L=300; 
+	
+	for(t=0;t<33;t++)
+{
+  if(NRF_buf[t]=='T')
+	{
+		t++;
+		temp=NRF_buf[t]-'0';
+		switch(temp)
+		{
+			case 1:
+			t=t+2;
+			TempTarget=(NRF_buf[t]-'0')*1000+(NRF_buf[t+1]-'0')*100+(NRF_buf[t+2]-'0')*10+(NRF_buf[t+3]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+		    	Target1=TempTarget;
+			break;
+			case 2:
+			t=t+2;
+			TempTarget=(NRF_buf[t]-'0')*1000+(NRF_buf[t+1]-'0')*100+(NRF_buf[t+2]-'0')*10+(NRF_buf[t+3]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+			   Target2=TempTarget;
+			break;
+			case 3:
+			t=t+2;
+			TempTarget=(NRF_buf[t]-'0')*1000+(NRF_buf[t+1]-'0')*100+(NRF_buf[t+2]-'0')*10+(NRF_buf[t+3]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+			   Target3=TempTarget;
+			break;
+			case 4:
+			t=t+2;
+			if('0'<=NRF_buf[t]<='9')
+				TempTarget=(NRF_buf[t]-'0')*1000+(NRF_buf[t+1]-'0')*100+(NRF_buf[t+2]-'0')*10+(NRF_buf[t+3]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+		   	Target4=TempTarget;
+			break;
+			case 5:
+			t=t+2;
+			TempTarget=(NRF_buf[t]-'0')*1000+(NRF_buf[t+1]-'0')*100+(NRF_buf[t+2]-'0')*10+(NRF_buf[t+3]-'0');
+			if(Amplitude_L<=TempTarget<=Amplitude_H)
+			   Target5=TempTarget;
+			break;
+			case 6:
+			t=t+2;
+			TempTarget=(NRF_buf[t]-'0')*1000+(NRF_buf[t+1]-'0')*100+(NRF_buf[t+2]-'0')*10+(NRF_buf[t+3]-'0');
 			if(Amplitude_L<=TempTarget<=Amplitude_H)
 			   Target6=TempTarget;
 			break;
