@@ -42,7 +42,6 @@
 ..\obj\oled.o: ..\HARDWARE\MPU6050\mpu6050.h
 ..\obj\oled.o: ..\HARDWARE\MPU6050\mpuiic.h
 ..\obj\oled.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
-..\obj\oled.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 ..\obj\oled.o: ..\HARDWARE\SPI\spi.h
 ..\obj\oled.o: ..\HARDWARE\NRF24L01\24l01.h
 ..\obj\oled.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h

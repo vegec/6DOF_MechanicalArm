@@ -60,7 +60,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5CB88B41)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5CB88B41)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5CB88B41)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5CB88B42)
-F (.\MiniBalance.c)(0x5CBB222F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\minibalance.o --omf_browse ..\obj\minibalance.crf --depend ..\obj\minibalance.d)
+F (.\MiniBalance.c)(0x5CBB337C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\minibalance.o --omf_browse ..\obj\minibalance.crf --depend ..\obj\minibalance.d)
 I (stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -90,7 +90,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x5CB88B41)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5CB88B41)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x5CB88B41)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5CB88B42)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\SYSTEM\delay\delay.h)(0x5CB88B41)
 I (..\HARDWARE\LED\led.h)(0x5CB88B42)
 I (..\HARDWARE\KEY\key.h)(0x5CB88B42)
@@ -102,7 +102,6 @@ I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -780,7 +779,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5CB88B41)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x5CB88B42)
 F (..\SYSTEM\delay\delay.c)(0x5CB88B41)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\delay.o --omf_browse ..\obj\delay.crf --depend ..\obj\delay.d)
 I (..\SYSTEM\delay\delay.h)(0x5CB88B41)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -819,14 +818,13 @@ I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 F (..\SYSTEM\sys\sys.c)(0x5CB88B41)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\sys.o --omf_browse ..\obj\sys.crf --depend ..\obj\sys.d)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -866,14 +864,13 @@ I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 F (..\SYSTEM\usart\usart.c)(0x5CB88B3D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -913,7 +910,6 @@ I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -921,7 +917,7 @@ I (D:\MDK5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 F (..\HARDWARE\KEY\key.c)(0x5CB88B42)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
 I (..\HARDWARE\KEY\key.h)(0x5CB88B42)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -960,7 +956,6 @@ I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -968,7 +963,7 @@ I (D:\MDK5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 F (..\HARDWARE\LED\LED.C)(0x5CB88B42)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\led.o --omf_browse ..\obj\led.crf --depend ..\obj\led.d)
 I (..\HARDWARE\LED\led.h)(0x5CB88B42)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -1007,16 +1002,15 @@ I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\math.h)(0x5475F2FE)
-F (..\HARDWARE\MPU6050\mpu6050.c)(0x5CB88B3D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\mpu6050.o --omf_browse ..\obj\mpu6050.crf --depend ..\obj\mpu6050.d)
+F (..\HARDWARE\MPU6050\mpu6050.c)(0x5CC51BB7)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\mpu6050.o --omf_browse ..\obj\mpu6050.crf --depend ..\obj\mpu6050.d)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -1054,7 +1048,6 @@ I (D:\MDK5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\USART3\usart3.h)(0x5CB88B42)
 I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -1062,7 +1055,7 @@ I (D:\MDK5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 F (..\HARDWARE\MPU6050\mpuiic.c)(0x5CB88B3D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\mpuiic.o --omf_browse ..\obj\mpuiic.crf --depend ..\obj\mpuiic.d)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -1101,7 +1094,6 @@ I (..\HARDWARE\USART3\usart3.h)(0x5CB88B42)
 I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -1144,7 +1136,7 @@ I (..\STM32F10x_FWLib\inc\misc.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\SYSTEM\delay\delay.h)(0x5CB88B41)
 I (..\HARDWARE\LED\led.h)(0x5CB88B42)
 I (..\HARDWARE\KEY\key.h)(0x5CB88B42)
@@ -1192,7 +1184,7 @@ I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\dmpKey.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\dmpmap.h)(0x5CB88B3D)
 I (..\SYSTEM\usart\usart.h)(0x5CB88B3D)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\SYSTEM\delay\delay.h)(0x5CB88B41)
 I (..\HARDWARE\LED\led.h)(0x5CB88B42)
 I (..\HARDWARE\KEY\key.h)(0x5CB88B42)
@@ -1205,7 +1197,7 @@ I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 F (..\HARDWARE\OLED\oled.c)(0x5CB88B42)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\oled.o --omf_browse ..\obj\oled.crf --depend ..\obj\oled.d)
 I (..\HARDWARE\OLED\oled.h)(0x5CB88B42)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -1244,7 +1236,6 @@ I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -1253,7 +1244,7 @@ I (D:\MDK5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\HARDWARE\OLED\oledfont.h)(0x5CB88B42)
 F (..\HARDWARE\TIMER\timer.c)(0x5CB88B42)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\timer.o --omf_browse ..\obj\timer.crf --depend ..\obj\timer.d)
 I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -1292,7 +1283,6 @@ I (..\HARDWARE\USART3\usart3.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -1300,7 +1290,7 @@ I (D:\MDK5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 F (..\HARDWARE\NRF24L01\24l01.c)(0x5CBA95A2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\24l01.o --omf_browse ..\obj\24l01.crf --depend ..\obj\24l01.d)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -1340,14 +1330,13 @@ I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 F (..\HARDWARE\SPI\spi.c)(0x5070F72C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\USER -I..\COER -I..\STM32F10x_FWLib\inc -I..\HARDWARE -I..\SYSTEM -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\OLED -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\ADC -I..\HARDWARE\MOTOR -I..\HARDWARE\TIMER -I..\HARDWARE\USART3 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\NRF24L01 -I..\HARDWARE\SPI-I E:\6DOF_MechanicalArm\McuForInput\USER\RTE-I D:\MDK5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-I D:\MDK5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DSTM32F10X_ -DHD -DUSE_STDPERIPH_DRIVER-o ..\obj\spi.o --omf_browse ..\obj\spi.crf --depend ..\obj\spi.d)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
-I (..\SYSTEM\sys\sys.h)(0x5CBA8AA2)
+I (..\SYSTEM\sys\sys.h)(0x5CC51BB7)
 I (..\USER\stm32f10x.h)(0x5CB88B41)
 I (..\COER\core_cm3.h)(0x5CB88B42)
 I (D:\MDK5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -1387,7 +1376,6 @@ I (..\HARDWARE\TIMER\timer.h)(0x5CB88B42)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\mpuiic.h)(0x5CB88B3D)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5CB88B3D)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5CB88B3D)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x5CBA8C9E)
 I (D:\MDK5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (D:\MDK5\ARM\ARMCC\include\stdlib.h)(0x5475F300)

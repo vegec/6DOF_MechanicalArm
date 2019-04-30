@@ -7,7 +7,7 @@ int TempTarget;
 	
 int main(void)
   { 
-	  u8 tmp_buf[33]="T1 1234 T2 0735 T6 0534";		
+	  u8 tmp_buf[33]="T1 1234 T2 0735 T6 0800";		
 //		u8 tmp_buf[33]="T1 800 T2 900";		
 //	uart_init(115200);
 		delay_init();
@@ -49,8 +49,19 @@ int main(void)
 				tmp_buf[4]=TempTarget/100%10+'0';
 				tmp_buf[5]=TempTarget/10%10+'0';
 				tmp_buf[6]=TempTarget%10+'0';
-				
-				
+
+				TempTarget=735+yaw*10;
+				tmp_buf[11]=TempTarget/1000+'0';
+				tmp_buf[12]=TempTarget/100%10+'0';
+				tmp_buf[13]=TempTarget/10%10+'0';
+				tmp_buf[14]=TempTarget%10+'0';				
+
+
+				TempTarget=800+roll*5;
+				tmp_buf[19]=TempTarget/1000+'0';
+				tmp_buf[20]=TempTarget/100%10+'0';
+				tmp_buf[21]=TempTarget/10%10+'0';
+				tmp_buf[22]=TempTarget%10+'0';					
 //				OLED_ShowNumber(1,48,TempTarget,5,12);
 				tmp_buf[32]=0;//¼ÓÈë½áÊø·û		   
 				OLED_ShowString(0,48,"Send SUCCESS "); 

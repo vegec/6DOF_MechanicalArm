@@ -42,7 +42,6 @@
 ..\obj\24l01.o: ..\HARDWARE\MPU6050\mpu6050.h
 ..\obj\24l01.o: ..\HARDWARE\MPU6050\mpuiic.h
 ..\obj\24l01.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
-..\obj\24l01.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
 ..\obj\24l01.o: ..\HARDWARE\SPI\spi.h
 ..\obj\24l01.o: ..\HARDWARE\NRF24L01\24l01.h
 ..\obj\24l01.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
