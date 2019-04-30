@@ -11,7 +11,7 @@ u8 delay_50,delay_flag,Bi_zhang=0,PID_Send,Flash_Send;                 //ÑÓÊ±ºÍµ
 float Balance_Kp=350,Balance_Kd=0,Velocity_Kp=70,Velocity_Ki=0.7;      //PID²ÎÊı
 u16 PID_Parameter[10],Flash_Parameter[10];                             //FlashÏà¹ØÊı×é 
 float Target_X=750,Target_Y=750	,Target_Z=750;                     
-float Target1=750,Target2=735,Target3=717,Target4=750,Target5=750,Target6=800;     //Éè¶¨µç»ú³õÊ¼Öµ
+float Target1=1234,Target2=735,Target3=717,Target4=750,Target5=750,Target6=800;     //Éè¶¨µç»ú³õÊ¼Öµ
 float TargetX=0.2,TargetY=0,Target_Beta=-45,Target_Alpha=0,Target_Gamma=0;     					//µç»úÄ¿±êÖµ
 float	Position_KP=6,Position_KI=0,Position_KD=3;                        //Î»ÖÃ¿ØÖÆPID²ÎÊı
 int PS2_LX,PS2_LY,PS2_RX,PS2_RY,PS2_KEY;
@@ -20,9 +20,7 @@ u8 NRF_buf[33];
 
 int main(void)
   { 
-		int temp=0;
-			
-		uart_init(115200);
+//		uart_init(115200);
 		delay_init();
 		JTAG_Set(SWD_ENABLE);//jtag,swdÄ£Ê½È«Ê¹ÄÜ
 		KEY_Init();//PA5×÷Îª°´¼üÊäÈë
@@ -44,19 +42,11 @@ int main(void)
 		  OLED_ShowString(1,36,"24L01 Ready!");
 			NRF24L01_RX_Mode();	
 		while(1)
-		{
-			temp=KEY_Scan();
-			if(temp==1)
-			{
-        Target1=Target1+10;
-			//	Target4=Target4+10;
-				//USART_RX_STA=0;
-			}		   		    		    				 
+		{  		    		    				 
 			if(NRF24L01_RxPacket(NRF_buf)==0)//Ò»µ©½ÓÊÕµ½ĞÅÏ¢,ÔòÏÔÊ¾³öÀ´.
 			{
 				NRF_buf[32]=0;//¼ÓÈë×Ö·û´®½áÊø·û
-				OLED_ShowString(1,48,"24L01 DATA RECV");    
-			}  			    
+			}
 			oled_show();
 		}
 
